@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  padding: 24px;
+  justify-content: center;
+}
+
+.contentDiv {
+  display: flex;
+  width: 700px;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  border: 3px solid lightblue;
+  border-radius: 25px;
+  padding: 24px;
+}
+
+.pictureDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonSave {
+  border: 0;
+  color: white;
+  font-size: large;
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.loaderSpinnerWrapper {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.loaderSpinner {
+  border: 2px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 2px solid #3498db;
+  width: 15px;
+  height: 15px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+/* @-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+} */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

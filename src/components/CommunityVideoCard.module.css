@@ -1,0 +1,28 @@
+.videoCard {
+  display: flex;
+  flex-direction: column;
+  width: 194px;
+  aspect-ratio: 16/16;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s;
+  border-radius: 25px;
+}
+
+.videoCard:hover {
+  cursor: pointer;
+  scale: 1.25;
+  z-index: 5;
+}
+
+.videoClip {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.videoDiv {
+  display: flex;
+  flex: 1;
+  position: relative;
+}

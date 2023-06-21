@@ -1,0 +1,120 @@
+.buttonSidebar {
+  background-color: #fafafa;
+  border: 0px;
+  font-size: 20px;
+  padding: 18px;
+}
+
+.buttonSidebar:hover {
+  background-color: rgb(237, 232, 232);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.buttonSidebar p {
+  font-size: 12px;
+}
+
+.contentDiv {
+  display: flex;
+  gap: 10;
+  margin-top: 24px;
+  flex-direction: column;
+}
+
+.userDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 25px;
+  padding: 8px;
+  height: 35px;
+  margin-left: 24px;
+}
+
+.mainLayout {
+  display: flex;
+  flex: 1;
+  background-color: #fafafa;
+  flex-direction: column;
+  align-items: center;
+}
+
+.followersDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+}
+
+.followerNumber {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  color: #333333;
+  font-weight: 700;
+}
+
+.followerNumber:hover {
+  cursor: pointer;
+  scale: 1.1;
+  text-decoration: underline;
+}
+
+.followerText {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.username {
+  font-weight: 500;
+}
+
+.username:hover {
+  text-decoration: underline;
+  scale: 1.01;
+  cursor: pointer;
+}
+
+.circleIcon {
+  position: relative;
+  display: inline-block;
+}
+
+.loaderSpinnerWrapper {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.loaderSpinner {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 250px;
+  height: 250px;
+  margin-top: 75px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+/* @-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+} */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

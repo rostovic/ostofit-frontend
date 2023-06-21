@@ -1,0 +1,73 @@
+.mainDiv {
+  display: flex;
+  height: 75px;
+  width: 100%;
+  align-items: center;
+  border-bottom: 2px solid lightblue;
+}
+
+.buttonDiv {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  gap: 10px;
+}
+
+.searchDiv {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 75px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 300px;
+}
+
+.rightDiv {
+  display: flex;
+  flex: 1;
+  height: 75px;
+  justify-content: center;
+}
+
+.divList {
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 25px;
+}
+
+.listStyle {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.popUpSearchDiv {
+  left: 0px;
+  top: 50px;
+  position: absolute;
+  width: 300px;
+  z-index: 1;
+}
+
+.buttonStyle {
+  border: 0;
+  background-color: transparent;
+  border: 0px solid transparent;
+  border-radius: 25px;
+  flex: 1;
+  transition: all 0.2s;
+}
+
+.buttonStyle:hover {
+  cursor: pointer;
+  height: 40px;
+  width: 80px;
+  border: 2px solid lightblue;
+}
+
+.spaceDiv {
+  flex: 1;
+}

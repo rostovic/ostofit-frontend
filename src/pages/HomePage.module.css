@@ -1,0 +1,88 @@
+.divtest {
+  height: 80%;
+}
+
+.text {
+  font-size: 12px;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.mainLayout {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.shortsLayout {
+  width: 400px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  width: 300px;
+  height: 500px;
+}
+
+.noContentDiv {
+  display: flex;
+  padding: 24px;
+  justify-content: center;
+}
+
+.noContentDivBorder {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  border: 3px solid lightblue;
+  border-radius: 25px;
+  padding: 24px;
+}
+
+.loaderSpinnerWrapper {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.loaderSpinner {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 250px;
+  height: 250px;
+  margin-top: 75px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+/* 
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+} */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

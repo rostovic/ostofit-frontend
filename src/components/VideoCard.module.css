@@ -1,0 +1,149 @@
+.videoCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  aspect-ratio: 10/16;
+  box-shadow: 0px 0px 10px rgb(106, 105, 105);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.videoDiv {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.videoFooter {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  flex-direction: column;
+}
+
+.footerContainer {
+  display: flex;
+  flex: 1;
+  padding: 6px;
+}
+
+.footerLeft {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.footerLeft p {
+  margin: 0;
+}
+
+.iconsDiv {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 2%;
+  top: 30%;
+  gap: 20px;
+}
+
+.singleIconDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerRight {
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.footerUser {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.videoTitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  padding-left: 8px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.videoTitle:hover {
+  text-decoration: underline;
+}
+
+.compactVideoTitle {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  padding: 8px;
+  cursor: pointer;
+}
+
+.compactVideoTitle:hover {
+  text-decoration: underline;
+}
+
+.videoClip {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.playVideoClass {
+  opacity: 0;
+  scale: 0;
+  transition: all 0.5s;
+}
+
+.pauseVideoClass {
+  opacity: 100;
+  scale: 1;
+  transition: all 0.5s;
+}
+
+.footerUser p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.videoPlayIconDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.boldText {
+  font-size: 14px;
+  color: white;
+}
+
+.removeVideo {
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+.datePostedText {
+  font-weight: 700;
+}

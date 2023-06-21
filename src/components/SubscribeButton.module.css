@@ -1,0 +1,19 @@
+.subscribedButtonStyle {
+  display: flex;
+  align-items: center;
+  gap: 2;
+}
+
+.subscribedButtonStyle p {
+  margin: 0;
+}
+
+.notSubcribedButtonStyle {
+  display: flex;
+  align-items: center;
+  gap: 2;
+}
+
+.notSubcribedButtonStyle p {
+  margin: 0;
+}

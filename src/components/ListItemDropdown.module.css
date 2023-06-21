@@ -1,0 +1,15 @@
+.usernameTextStyle {
+  cursor: pointer;
+}
+
+.usernameTextStyle:hover {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.listItem {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-left: 10px;
+}

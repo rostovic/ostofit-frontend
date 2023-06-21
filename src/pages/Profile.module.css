@@ -1,0 +1,117 @@
+.nameText {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.mainDiv {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contentDiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.videoCardDiv {
+  display: flex;
+  aspect-ratio: 9 / 16;
+  width: 30%;
+  padding-inline: 12px;
+  padding-bottom: 24px;
+}
+
+.userDiv {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.errorDiv {
+  display: flex;
+  padding: 24px;
+  justify-content: center;
+}
+
+.errorDivBorder {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  border: 3px solid lightblue;
+  border-radius: 25px;
+  padding: 24px;
+}
+
+.tooltip {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  color: #fff;
+  text-align: center;
+  border: 1px solid ligthblue;
+  background-color: lightblue;
+  border-radius: 25px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  color: white;
+  margin-left: 35px;
+}
+
+.loaderSpinnerWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.loaderSpinner {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 250px;
+  height: 250px;
+  margin-top: 75px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+.dateText {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

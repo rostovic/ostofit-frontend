@@ -1,0 +1,78 @@
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.contentDiv {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  gap: 4px;
+}
+
+.selectDiv {
+  width: 100px;
+  margin-top: 24px;
+}
+
+.selectOption {
+  background-color: transparent;
+  border: 2px solid lightblue;
+  padding: 8px;
+  border-radius: 25px;
+}
+
+.loaderSpinnerWrapper {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.loaderSpinner {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 250px;
+  height: 250px;
+  margin-top: 75px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+/* 
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  } */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
+  width: 100px;
+}

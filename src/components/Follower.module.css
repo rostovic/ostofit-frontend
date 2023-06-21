@@ -1,0 +1,54 @@
+.followerDiv {
+  background-color: lightblue;
+  border-radius: 25px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 2px;
+  padding-inline: 12px;
+}
+
+.followerDiv p {
+  margin: 0;
+  padding: 0;
+}
+
+.followerDiv:hover {
+  background: red;
+  cursor: pointer;
+}
+
+.singleFollower {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 500px;
+}
+
+.singleFollower p {
+  flex: 1;
+}
+
+.singleFollower p:hover {
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.requestDiv {
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+
+.iconStyle {
+  color: white;
+  border-radius: 25px;
+}
+
+.iconStyle:hover {
+  scale: 1.35;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
