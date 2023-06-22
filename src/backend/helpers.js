@@ -1,10 +1,12 @@
+const BACKEND_URL = "https://ostofit.onrender.com";
+
 export const createNewAccount = async (
   firstName,
   lastName,
   username,
   password
 ) => {
-  const response = await fetch(`http://localhost:5000/createNewAccount`, {
+  const response = await fetch(`${BACKEND_URL}/createNewAccount`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -22,7 +24,7 @@ export const createNewAccount = async (
 
 export const loginUser = async (username, password) => {
   const response = await fetch(
-    `http://localhost:5000/login?username=${username}&password=${password}`,
+    `${BACKEND_URL}/login?username=${username}&password=${password}`,
     {
       method: "GET",
       headers: {
@@ -41,7 +43,7 @@ export const loginUser = async (username, password) => {
 
 export const refreshUserData = async (username) => {
   const response = await fetch(
-    `http://localhost:5000/refreshUserData?username=${username}`,
+    `${BACKEND_URL}/refreshUserData?username=${username}`,
     {
       method: "GET",
       headers: {
@@ -59,7 +61,7 @@ export const refreshUserData = async (username) => {
 };
 
 export const getAllDataNumbers = async (id) => {
-  const response = await fetch(`http://localhost:5000/home?id=${id}`, {
+  const response = await fetch(`${BACKEND_URL}/home?id=${id}`, {
     method: "GET",
     headers: {
       "Content-type": "application/json",
@@ -75,7 +77,7 @@ export const getAllDataNumbers = async (id) => {
 };
 
 export const getAllFollowerRequests = async (id) => {
-  const response = await fetch(`http://localhost:5000/requests?id=${id}`, {
+  const response = await fetch(`${BACKEND_URL}/requests?id=${id}`, {
     method: "GET",
     headers: {
       "Content-type": "application/json",
@@ -89,7 +91,7 @@ export const getAllFollowerRequests = async (id) => {
 };
 
 export const actionRequest = async (action, myID, userID) => {
-  const response = await fetch(`http://localhost:5000/acceptDeclineRequest`, {
+  const response = await fetch(`${BACKEND_URL}/acceptDeclineRequest`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -104,7 +106,7 @@ export const actionRequest = async (action, myID, userID) => {
 };
 
 export const getAllFollowersForUser = async (id) => {
-  const response = await fetch(`http://localhost:5000/followers?id=${id}`, {
+  const response = await fetch(`${BACKEND_URL}/followers?id=${id}`, {
     method: "GET",
     headers: {
       "Content-type": "application/json",
@@ -118,7 +120,7 @@ export const getAllFollowersForUser = async (id) => {
 };
 
 export const getAllFollowingForUser = async (id) => {
-  const response = await fetch(`http://localhost:5000/following?id=${id}`, {
+  const response = await fetch(`${BACKEND_URL}/following?id=${id}`, {
     method: "GET",
     headers: {
       "Content-type": "application/json",
@@ -132,15 +134,12 @@ export const getAllFollowingForUser = async (id) => {
 };
 
 export const getProfileData = async (username, id) => {
-  const response = await fetch(
-    `http://localhost:5000/profile/${username}?id=${id}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-type": "application/json",
-      },
-    }
-  );
+  const response = await fetch(`${BACKEND_URL}/profile/${username}?id=${id}`, {
+    method: "GET",
+    headers: {
+      "Content-type": "application/json",
+    },
+  });
   const data = await response.json();
   if (data.status === "success") {
     return data;
@@ -149,15 +148,12 @@ export const getProfileData = async (username, id) => {
 };
 
 export const getMyProfileData = async (username) => {
-  const response = await fetch(
-    `http://localhost:5000/profile?username=${username}`,
-    {
-      method: "GET",
-      headers: {
-        "Content-type": "application/json",
-      },
-    }
-  );
+  const response = await fetch(`${BACKEND_URL}/profile?username=${username}`, {
+    method: "GET",
+    headers: {
+      "Content-type": "application/json",
+    },
+  });
   const data = await response.json();
   if (data.status === "success") {
     return data;
@@ -167,7 +163,7 @@ export const getMyProfileData = async (username) => {
 
 export const findUsers = async (username, id) => {
   const response = await fetch(
-    `http://localhost:5000/findUsers?username=${username}&id=${id}`,
+    `${BACKEND_URL}/findUsers?username=${username}&id=${id}`,
     {
       method: "GET",
       headers: {
@@ -183,7 +179,7 @@ export const findUsers = async (username, id) => {
 };
 
 export const getFollowerShorts = async (id) => {
-  const response = await fetch(`http://localhost:5000/findShorts?id=${id}`, {
+  const response = await fetch(`${BACKEND_URL}/findShorts?id=${id}`, {
     method: "GET",
     headers: {
       "Content-type": "application/json",
@@ -197,7 +193,7 @@ export const getFollowerShorts = async (id) => {
 };
 
 export const updateUserData = async (username, profilePic, description, id) => {
-  const response = await fetch(`http://localhost:5000/updateUserData`, {
+  const response = await fetch(`${BACKEND_URL}/updateUserData`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -213,16 +209,13 @@ export const updateUserData = async (username, profilePic, description, id) => {
 };
 
 export const updateUserDataWithoutUsername = async (profilePic, id) => {
-  const response = await fetch(
-    `http://localhost:5000/updateUserDataWithoutUsername`,
-    {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({ profilePic, id }),
-    }
-  );
+  const response = await fetch(`${BACKEND_URL}/updateUserDataWithoutUsername`, {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify({ profilePic, id }),
+  });
 
   const data = await response.json();
   if (data.status === "success") {
@@ -233,7 +226,7 @@ export const updateUserDataWithoutUsername = async (profilePic, id) => {
 
 export const checkIfUsernameIsNotTaken = async (username) => {
   const response = await fetch(
-    `http://localhost:5000/checkIfUsernameIsNotTaken?username=${username}`,
+    `${BACKEND_URL}/checkIfUsernameIsNotTaken?username=${username}`,
     {
       method: "GET",
       headers: {
@@ -251,7 +244,7 @@ export const checkIfUsernameIsNotTaken = async (username) => {
 
 export const getVideoData = async (videoID, myID) => {
   const response = await fetch(
-    `http://localhost:5000/getVideoData?videoID=${videoID}&myID=${myID}`,
+    `${BACKEND_URL}/getVideoData?videoID=${videoID}&myID=${myID}`,
     {
       method: "GET",
       headers: {
@@ -269,7 +262,7 @@ export const getVideoData = async (videoID, myID) => {
 
 export const getCommentsData = async (videoID, myID) => {
   const response = await fetch(
-    `http://localhost:5000/getCommentsData?videoID=${videoID}&myID=${myID}`,
+    `${BACKEND_URL}/getCommentsData?videoID=${videoID}&myID=${myID}`,
     {
       method: "GET",
       headers: {
@@ -286,7 +279,7 @@ export const getCommentsData = async (videoID, myID) => {
 };
 
 export const postComment = async (comment, videoID, myID) => {
-  const response = await fetch(`http://localhost:5000/postComment`, {
+  const response = await fetch(`${BACKEND_URL}/postComment`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -300,7 +293,7 @@ export const postComment = async (comment, videoID, myID) => {
 };
 
 export const likeComment = async (identifier, status, commentID, myID) => {
-  const response = await fetch(`http://localhost:5000/likeDislikeComment`, {
+  const response = await fetch(`${BACKEND_URL}/likeDislikeComment`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -319,7 +312,7 @@ export const subUnSubToUser = async (
   userUsername,
   requestSent
 ) => {
-  const response = await fetch(`http://localhost:5000/subUnSubToUser`, {
+  const response = await fetch(`${BACKEND_URL}/subUnSubToUser`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -333,7 +326,7 @@ export const subUnSubToUser = async (
 };
 
 export const likeDislikeVideo = async (videoID, myID, liked) => {
-  const response = await fetch(`http://localhost:5000/likeDislikeVideo`, {
+  const response = await fetch(`${BACKEND_URL}/likeDislikeVideo`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -347,7 +340,7 @@ export const likeDislikeVideo = async (videoID, myID, liked) => {
 };
 
 export const uploadVideo = async (formData, username, title) => {
-  const response = await fetch(`http://localhost:5000/uploadVideo`, {
+  const response = await fetch(`${BACKEND_URL}/uploadVideo`, {
     method: "POST",
     body: formData,
     headers: {
@@ -363,7 +356,7 @@ export const uploadVideo = async (formData, username, title) => {
 };
 
 export const deleteVideo = async (videoID) => {
-  const response = await fetch(`http://localhost:5000/deleteVideo`, {
+  const response = await fetch(`${BACKEND_URL}/deleteVideo`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -377,7 +370,7 @@ export const deleteVideo = async (videoID) => {
 
 export const getCommunityVideos = async (myID, filterNum) => {
   const response = await fetch(
-    `http://localhost:5000/getCommunityVideos?myID=${myID}&filterNum=${filterNum}`,
+    `${BACKEND_URL}/getCommunityVideos?myID=${myID}&filterNum=${filterNum}`,
     {
       method: "GET",
       headers: {
