@@ -165,7 +165,7 @@ const VideoCard = ({
           muted={playNow}
         >
           <source
-            src={`http://localhost:5000/video?videoID=${videoDetails.videoID}`}
+            src={`https://ostofit.onrender.com/video?videoID=${videoDetails.videoID}`}
             type="video/mp4"
           />
         </video>
