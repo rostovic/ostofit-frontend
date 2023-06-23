@@ -3,6 +3,7 @@ import { AuthContext } from "../context/auth-context";
 import { useContext, useEffect, useRef, useState } from "react";
 import VideoCard from "../components/VideoCard";
 import { getFollowerShorts, likeDislikeVideo } from "../backend/helpers";
+import { BACKEND_URL } from "../backend/helpers";
 
 const Homepage = () => {
   const [isObserverReady, setIsObserverReady] = useState(false);

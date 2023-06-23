@@ -20,6 +20,7 @@ import Forward5Icon from "@mui/icons-material/Forward5";
 import Replay5Icon from "@mui/icons-material/Replay5";
 import CancelIcon from "@mui/icons-material/Cancel";
 import DeleteVideoWindow from "./DeleteVideoWindow";
+import { BACKEND_URL } from "../backend/helpers";
 
 const VideoCard = ({
   videoDetails,
@@ -165,7 +166,7 @@ const VideoCard = ({
           muted={playNow}
         >
           <source
-            src={`https://ostofit.onrender.com/video?videoID=${videoDetails.videoID}`}
+            src={`${BACKEND_URL}/video?videoID=${videoDetails.videoID}`}
             type="video/mp4"
           />
         </video>

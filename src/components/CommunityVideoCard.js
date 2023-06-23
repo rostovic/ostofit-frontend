@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import classes from "./CommunityVideoCard.module.css";
 import { useState } from "react";
+import { BACKEND_URL } from "../backend/helpers";
 
 const CommunityVideoCard = ({ videoDetails, openModal }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -30,7 +31,7 @@ const CommunityVideoCard = ({ videoDetails, openModal }) => {
         >
           <source
             className={classes.videoClip}
-            src={`https://ostofit.onrender.com/video?videoID=${videoDetails.videoID}`}
+            src={`${BACKEND_URL}/video?videoID=${videoDetails.videoID}`}
             type="video/mp4"
           />
         </video>
